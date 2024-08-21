@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    color: var(--branco);
+    max-height: 100vh;
+    text-transform: uppercase;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.7rem 2.5rem;
+    align-items: center;
+}
+
+.header_shop {
+    border: 1px solid var(--letra);
+    padding: 0.2rem 0.6rem;
+    border-radius: 10rem;
+}
+
+.header img {
+    height: 4.5rem;
+    margin-left: 1rem;
+}
+
+/* ---------------------- */
+
+.album_text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 400;
+}
+
+.album_text h2 {
+    margin-top: -0.5rem;
+    font-weight: 400;
+}

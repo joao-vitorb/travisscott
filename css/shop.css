@@ -1,0 +1,283 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#dynamic-image {
+    width: 63.5vw; /* Initial width of the image */
+    transition: width 0.1s, top 0.1s;
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+.cart-button {
+    position: fixed;
+    top: 28px;
+    right: 8px;
+    padding: 10px 20px;
+    background-color: var(--preto);
+    color: var(--branco);
+    border: 1px solid var(--preto);
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    z-index: 1000;
+    letter-spacing: 0.2rem;
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+.container_vinyl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 410em;
+}
+
+.shop_vinyl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.shop_vinyl_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    color: white;
+    gap: 5rem;
+}
+
+.shop_vinyl_text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+    cursor: pointer;
+}
+
+.vinyl_image {
+    width: 650px;
+    height: 320px;
+    margin-bottom: 10px;
+}
+
+.cd_image {
+    width: 420px;
+    height: 320px;
+    margin-bottom: 10px;
+}
+
+
+.shop_vinyl_item h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+.container_cd {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop_cd {
+    display: flex;
+    flex-direction: row;
+    gap: 17rem;
+}
+
+.shop_cd h1 {
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.shop_cd_text {
+    cursor: pointer;
+}
+
+.shop_cd img {
+    width: 220px;
+    height: 220px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+.container_kpop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+}
+
+.shop_kpop {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem; /* Reduzi o espaçamento entre os itens para ajustar melhor */
+    align-items: center;
+}
+
+.shop_kpop_text {
+    cursor: pointer;
+    text-align: center;
+}
+
+.shop_kpop h1 {
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+#img_kpop1 {
+    width: 550px;
+    height: 550px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#img_kpop2 {
+    width: 380px;
+    height: 300px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#img_kpop1.alt {
+    width: 550px;
+    height: 550px;
+}
+
+#img_kpop2.alt {
+    width: 380px;
+    height: 290px;
+}
+
+#img_kpop1:hover, #img_kpop2:hover {
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+#img_kpop2:hover {
+    margin-bottom: 3.6rem;
+}
+
+#text_kpop2 {
+    margin-top: 16rem;
+}
+
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+.dropdown {
+    position: relative;
+}
+  
+#sizeButton {
+    background-color: black;
+    color: white;
+    padding: 20px 95px 20px 85px; /* Ajuste o padding conforme necessário */
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    border: 1px solid white;
+    border-radius: 10rem; /* Raio da borda arredondada */
+    cursor: pointer;
+    position: relative; /* Para posicionar o ícone */
+    text-transform: uppercase;
+}
+
+#buyButton {
+    background-color: black;
+    color: white;
+    padding: 20px 75px 20px 75px; /* Ajuste o padding conforme necessário */
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    border: 1px solid white;
+    border-radius: 10rem; /* Raio da borda arredondada */
+    cursor: pointer;
+    position: relative; /* Para posicionar o ícone */
+    text-transform: uppercase;
+    margin-left: 1rem;
+}
+  
+#sizeButton ion-icon {
+    position: absolute;
+    right: 10px; /* Distância do ícone até a borda direita */
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: #f1f1f1}
+  
+.show {display:block;}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 28.5rem;
+}
+
+.footer_text {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.footer_text h1 {
+    display: flex;
+    flex-direction: row;
+    color: var(--branco);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}

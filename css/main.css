@@ -1,0 +1,336 @@
+body {
+    background-color: #cccccc; /* Cor de fundo inicial cinza */
+    transition: background-color 0.5s ease; /* Transição suave */
+}
+
+body.dark-mode {
+    background-color: #000000; /* Cor de fundo preto */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+.tour-table tr {
+    opacity: 1;
+    transition: opacity 1s ease; /* Transição suave para a opacidade */
+}
+
+.tour-table tr.active {
+    opacity: 1; /* Torna a linha visível */
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-img {
+    position: absolute;
+    width: 320px; /* Ajuste o tamanho conforme necessário */
+    margin-top: -4rem;
+    transition: transform 0.1s, width 0.1s; /* Suaviza o movimento e o aumento da imagem */
+    border-radius: 0.5rem; /* Adiciona bordas arredondadas */
+}
+
+.glitch-text {
+    position: relative;
+    margin-bottom: -24.5%;
+    font-weight: 350;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    font-size: 0.88rem;
+}
+
+.button {
+    position: absolute;
+    top: 20px;
+    padding: 7px 9px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.39);
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 350;
+}
+
+.button-left {
+    left: 30px;
+    position: fixed;
+}
+
+.button-right {
+    right: 30px;
+    position: fixed;
+}
+
+.button:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.container_arrow ion-icon {
+    color: var(--letra);
+}
+
+.container_arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translate(0,-10.8rem);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+    color: var(--branco);
+}
+
+.tour-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tour-table td {
+    padding: 0.4rem 6rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); 
+    font-size: 1.1rem;
+    font-weight: 450;
+}
+
+.dates {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+    margin-top: auto;
+    padding: 0 4rem; /* Espaçamento interno */
+}
+
+.dates_first {
+    display: flex;
+    flex-direction: column;
+}
+
+#dates_second {
+    color: var(--letra);
+}
+
+.dates_text {
+    display: flex;
+    flex-direction: row;
+}
+
+.tour-table tr {
+    transition: all 0.2s;
+}
+
+.tour-table tr:hover {
+    cursor: pointer;
+    color: var(--letra);
+}
+
+.tour-table tr:hover td {
+    transition: all 0.2s;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); 
+}
+
+.bottom-logo {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* Tamanho pequeno das imagens */
+    height: 60px; /* Tamanho pequeno das imagens */
+    padding: 0.3rem;
+    border: 2px solid rgba(128, 128, 128, 0.4); /* Borda redonda cinza */
+    border-radius: 50%;
+    z-index: 1000;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px); /* Desfoque aplicado ao conteúdo por trás */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com navegadores WebKit */
+}
+
+.bottom-logo img {
+    width: 100%; /* Garante que a imagem preencha o contêiner */
+    height: auto;
+    border-radius: 50%;
+}
+
+.bottom-logo img.x-close {
+    width: 30px; /* Tamanho menor para a imagem x-close.png */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* -------------------------- */
+/* -------------------------- */
+
+.top-container {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.top-container.show {
+    opacity: 1;
+}
+
+#top-image {
+    margin-top: 0.4rem;
+    max-height: 69px;
+}
+
+.option-container {
+    position: fixed;
+    bottom: -200px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: bottom 0.5s;
+}
+
+.option-container.show {
+    bottom: 10rem;
+    gap: 6rem;
+}
+
+.option {
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo transparente borrado */
+    color: white; /* Texto branco */
+    border: 2px solid white; /* Borda fina branca */
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-transform: uppercase;
+}
+
+#option1 {
+    padding: 0.5rem 4.9rem;
+}
+
+#option2 {
+    padding: 0.5rem 2.9rem;
+}
+
+#option3 {
+    padding: 0.5rem 3.3rem;
+}
+
+#option4 {
+    padding: 0.5rem 2.9rem;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+
+#toggle-button {
+    position: fixed;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2); /* fundo borrado */
+    border: 1px solid rgba(255, 255, 255, 0.39); /* borda fina branca */
+    border-radius: 50%; /* borda redonda */
+    cursor: pointer;
+    transition: transform 0.3s;
+    padding: 0.3rem;
+}
+
+#toggle-button img {
+    width: 60px; /* tamanho fixo para as imagens */
+    height: 60px;
+}
+
+#toggle-button:active {
+    transform: scale(0.9);
+}
+
+#left-button, #right-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: left 0.5s, right 0.5s, opacity 0.5s;
+}
+
+#left-button {
+    left: -100px;
+}
+
+#right-button {
+    right: -100px;
+}
+
+#left-button.show {
+    left: 235px;
+    opacity: 1;
+}
+
+#right-button.show {
+    right: 235px;
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor escura com transparência */
+    z-index: 998; /* Z-index menor que os elementos que não devem ser escurecidos */
+    display: none; /* Inicialmente oculto */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+}
+
+.no-darken {
+    z-index: 999; /* Z-index maior que o overlay para manter visível */
+}
+
+.overlay.active {
+    display: block; /* Mostra o overlay ao abrir */
+    opacity: 1; /* Torna o overlay visível */
+}

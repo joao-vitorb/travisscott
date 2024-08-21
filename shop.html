@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/shop.css">
+    
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="./assets/utopia-logo3.png" alt="Utopia Logo" id="dynamic-image">
+    </div>
+    
+    <button class="cart-button">CART 0</button>
+
+    <section class="container_vinyl">
+        <div class="shop_vinyl">
+            <div class="shop_vinyl_item">
+                <div class="shop_vinyl_text">
+                    <img class="vinyl_image" src="./assets/shop-vinyl1.png" alt="Utopia Vinyl 1">
+                    <h1>utopia 2 disk vinyl lp cover 1 <br><br> $50</h1>
+                </div>
+                <div class="shop_vinyl_text">
+                    <img class="cd_image" src="./assets/shop-vinyl2.png" alt="Utopia CD 1">
+                    <h1>utopia cd cover 1 <br><br> $12</h1>
+                </div>
+            </div>
+            <div class="shop_vinyl_item">
+                <div class="shop_vinyl_text">
+                    <img class="vinyl_image" src="./assets/shop-vinyl4.png" alt="Utopia Vinyl 2">
+                    <h1>utopia 2 disk vinyl lp cover 2 <br><br> $50</h1>
+                </div>
+                <div class="shop_vinyl_text">
+                    <img class="cd_image" src="./assets/shop-vinyl3.png" alt="Utopia CD 2">
+                    <h1>utopia cd cover 2 <br><br> $12</h1>
+                </div>
+            </div>
+            <div class="shop_vinyl_item">
+                <div class="shop_vinyl_text">
+                    <img class="vinyl_image" src="./assets/shop-vinyl5.png" alt="Utopia Vinyl 3">
+                    <h1>utopia 2 disk vinyl lp cover 3 <br><br> $50</h1>
+                </div>
+                <div class="shop_vinyl_text">
+                    <img class="cd_image" src="./assets/shop-vinyl6.png" alt="Utopia CD 3">
+                    <h1>utopia cd cover 3 <br><br> $12</h1>
+                </div>
+            </div>
+            <div class="shop_vinyl_item">
+                <div class="shop_vinyl_text">
+                    <img class="vinyl_image" src="./assets/shop-vinyl7.png" alt="Utopia Vinyl 4">
+                    <h1>utopia 2 disk vinyl lp cover 4 <br><br> $50</h1>
+                </div>
+                <div class="shop_vinyl_text">
+                    <img class="cd_image" src="./assets/shop-vinyl8.png" alt="Utopia CD 4">
+                    <h1>utopia cd cover 4 <br><br> $12</h1>
+                </div>
+            </div>
+            <div class="shop_vinyl_item">
+                <div class="shop_vinyl_text">
+                    <img class="vinyl_image" src="./assets/shop-vinyl9.png" alt="Utopia Vinyl 5">
+                    <h1>utopia 2 disk vinyl lp cover 5 <br><br> $50</h1>
+                </div>
+                <div class="shop_vinyl_text">
+                    <img class="cd_image" src="./assets/shop-vinyl10.png" alt="Utopia CD 5">
+                    <h1>utopia cd cover 5 <br><br> $12</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container_cd">
+        <div class="shop_cd">
+            <div class="shop_cd_text">
+                <img src="./assets/shop-cd1.png" alt="">
+                <h1>utopia zine cover #1 <br><br> $25</h1>
+            </div>
+            <div class="shop_cd_text">
+                <img src="./assets/shop-cd2.png" alt="">
+                <h1>utopia zine cover #2 <br><br> $25</h1>
+            </div>
+            <div class="shop_cd_text">
+                <img src="./assets/shop-cd3.png" alt="">
+                <h1>utopia zine cover #3 <br><br> $25</h1>
+            </div>
+        </div>
+        <div class="shop_cd">
+            <div class="shop_cd_text">
+                <img src="./assets/shop-cd4.png" alt="">
+                <h1>utopia zine cover #4 <br><br> $25</h1>
+            </div>
+            <div class="shop_cd_text">
+                <img src="./assets/shop-cd5.png" alt="">
+                <h1>utopia zine cover #5 <br><br> $25</h1>
+            </div>
+            <div class="shop_cd_text">
+                <img src="./assets/shop-cd6.png" alt="">
+                <h1>utopia zine cover #6 <br><br> $25</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="container_kpop">
+        <div class="shop_kpop">
+            <div class="shop_kpop_text">
+                <img id="img_kpop1" src="./assets/shop-kpop1.png" alt="">
+                <h1 id="text_kpop1">kpop vinyl <br><br> $10</h1>
+            </div>
+            <div class="shop_kpop_text">
+                <img id="img_kpop2" src="./assets/shop-kpop2.png" alt="">
+                <h1 id="text_kpop2">kpop cd <br><br> $3.50</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" id="sizeButton">
+          Size <ion-icon name="caret-down-outline"></ion-icon>
+        </button>
+        <button id="buyButton">Buy all</button>
+        <div id="sizeDropdown" class="dropdown-content">
+          <a href="#" onclick="selectSize('S')">S</a>
+          <a href="#" onclick="selectSize('M')">M</a>
+          <a href="#" onclick="selectSize('L')">L</a>
+          <a href="#" onclick="selectSize('XL')">XL</a>
+          <a href="#" onclick="selectSize('2XL')">2XL</a>
+        </div>
+      </div>
+
+
+    <section class="footer">
+        <div class="footer_text">
+            <h1>contact customer service</h1>
+            <h1>terms</h1>
+            <h1>privacy</h1>
+            <h1>cookie policy</h1>
+            <h1>do not sell my personal information</h1>
+        </div>
+    </section>
+
+    <script src="./shop.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    <script src="https://kit.fontawesome.com/a4cc9519e8.js" crossorigin="anonymous"></script>
+</body>
+</html>
