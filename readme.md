@@ -34,4 +34,4 @@ Esse projeto está sob a licença MIT.
 ---
 
 Feito com ♥ por João Vitor Borges :wave:# tsvet
-# travisscott# travisscott
+# travisscott
